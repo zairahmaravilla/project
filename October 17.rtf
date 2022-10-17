@@ -1,0 +1,562 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red191\green100\blue38;\red32\green32\blue32;\red88\green118\blue71;
+\red153\green168\blue186;\red173\green169\blue32;\red254\green187\blue91;\red86\green132\blue173;\red133\green96\blue154;
+\red109\green109\blue109;}
+{\*\expandedcolortbl;;\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c34510\c46275\c27843;
+\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c67843\c66275\c12549;\csgenericrgb\c99608\c73333\c35686;\csgenericrgb\c33725\c51765\c67843;\csgenericrgb\c52157\c37647\c60392;
+\csgenericrgb\c42745\c42745\c42745;}
+\margl1440\margr1440\vieww28600\viewh15060\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 import \cf4 'package:flutter/cupertino.dart'\cf2 ;\
+import \cf4 'package:flutter/material.dart'\cf2 ;\
+import \cf4 'package:homeee/CartBotttomNavBar.dart'\cf2 ;\
+\
+class \cf5 CartPage \cf2 extends \cf5 StatelessWidget \{\
+  \cf2 const \cf5 CartPage(\{Key? key\}) : \cf2 super\cf5 (key: key)\cf2 ;\
+\
+  \cf6 @override\
+  \cf5 Widget \cf7 build\cf5 (BuildContext context) \{\
+    \cf2 return \cf7 Scaffold\cf5 (\
+      appBar: \cf7 AppBar\cf5 ()\cf2 ,\
+      \cf5 body: \cf7 ListView\cf5 (\
+        children: [\
+          \cf7 SingleChildScrollView\cf5 (\
+            child: \cf7 Padding\cf5 (\
+              padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (horizontal: \cf8 10\cf5 )\cf2 ,\
+              \cf5 child: \cf7 Column\cf5 (\
+                crossAxisAlignment: CrossAxisAlignment.\cf9 start\cf2 ,\
+                \cf5 children: [\
+                  \cf7 Padding\cf5 (\
+                    padding: \cf7 EdgeInsets\cf5 .\cf7 only\cf5 (\
+                      top: \cf8 20\cf2 ,\
+                      \cf5 left: \cf8 10\cf2 ,\
+                      \cf5 bottom: \cf8 10\cf2 ,\
+                    \cf5 )\cf2 ,\
+                    \cf5 child: \cf7 Text\cf5 (\
+                      \cf4 "Order List"\cf2 ,\
+                      \cf5 style: \cf7 TextStyle\cf5 (\
+                        fontSize: \cf8 30\cf2 ,\
+                        \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+                  \cf10 //Item\
+                  \cf7 Padding\cf5 (\
+                    padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (vertical: \cf8 9\cf5 )\cf2 ,\
+                    \cf5 child: \cf7 Container\cf5 (\
+                      width: \cf8 380\cf2 ,\
+                      \cf5 height: \cf8 100\cf2 ,\
+                      \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                        color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                        \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                        \cf5 boxShadow: [\
+                          \cf7 BoxShadow\cf5 (\
+                            color: Colors.
+\f1\i \cf9 grey
+\f0\i0 \cf5 .withOpacity(\cf8 0.5\cf5 )\cf2 ,\
+                            \cf5 spreadRadius: \cf8 3\cf2 ,\
+                            \cf5 blurRadius: \cf8 10\cf2 ,\
+                            \cf5 offset: \cf7 Offset\cf5 (\cf8 0\cf2 , \cf8 3\cf5 )\cf2 ,\
+                          \cf5 )\
+                        ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                      \cf5 child: \cf7 Row\cf5 (\
+                        children: [\
+                          \cf7 Container\cf5 (\
+                            alignment: Alignment.
+\f1\i \cf9 center
+\f0\i0 \cf2 ,\
+                            \cf5 child: \cf7 Image\cf5 .\cf7 asset\cf5 (\
+                              \cf4 'assets/images/geto.jpeg'\cf2 ,\
+                              \cf5 height: \cf8 90\cf2 ,\
+                              \cf5 width: \cf8 130\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Container\cf5 (\
+                            width: \cf8 180\cf2 ,\
+                            \cf5 child: \cf7 Column\cf5 (\
+                              crossAxisAlignment: CrossAxisAlignment.\cf9 start\cf2 ,\
+                              \cf5 mainAxisAlignment: MainAxisAlignment.\cf9 spaceAround\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Geto Figure"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Suguru Geto"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 14\cf2 ,\
+                                    \cf10 //fontWeight: FontWeight.bold,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "\uc0\u8369 1,450.00"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                                vertical: \cf8 10\cf2 , \cf5 horizontal: \cf8 14\cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Container\cf5 (\
+                              padding: \cf7 EdgeInsets\cf5 .\cf7 all\cf5 (\cf8 5\cf5 )\cf2 ,\
+                              \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                                color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                              \cf5 )\cf2 ,\
+                              \cf5 child: \cf7 Column\cf5 (\
+                                mainAxisAlignment:\
+                                    MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                                \cf5 children: [\
+                                  \cf7 Icon\cf5 (\
+                                    CupertinoIcons.
+\f1\i \cf9 add_circled
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                  \cf7 Text\cf5 (\
+                                    \cf4 "2"\cf2 ,\
+                                    \cf5 style: \cf7 TextStyle\cf5 (\
+                                      fontSize: \cf8 18\cf2 ,\
+                                      \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                      \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                    \cf5 )\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                  \cf7 Icon\cf5 (\
+                                    CupertinoIcons.
+\f1\i \cf9 minus_circle
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 ]\cf2 ,\
+                              \cf5 )\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                        \cf5 ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+\
+                  \cf10 //Item\
+                  \cf7 Padding\cf5 (\
+                    padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (vertical: \cf8 9\cf5 )\cf2 ,\
+                    \cf5 child: \cf7 Container\cf5 (\
+                      width: \cf8 380\cf2 ,\
+                      \cf5 height: \cf8 100\cf2 ,\
+                      \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                        color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                        \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                        \cf5 boxShadow: [\
+                          \cf7 BoxShadow\cf5 (\
+                            color: Colors.
+\f1\i \cf9 grey
+\f0\i0 \cf5 .withOpacity(\cf8 0.5\cf5 )\cf2 ,\
+                            \cf5 spreadRadius: \cf8 3\cf2 ,\
+                            \cf5 blurRadius: \cf8 10\cf2 ,\
+                            \cf5 offset: \cf7 Offset\cf5 (\cf8 0\cf2 , \cf8 3\cf5 )\cf2 ,\
+                          \cf5 )\
+                        ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                      \cf5 child: \cf7 Row\cf5 (\
+                        children: [\
+                          \cf7 Container\cf5 (\
+                            alignment: Alignment.
+\f1\i \cf9 center
+\f0\i0 \cf2 ,\
+                            \cf5 child: \cf7 Image\cf5 .\cf7 asset\cf5 (\
+                              \cf4 'assets/images/kaido.jpeg'\cf2 ,\
+                              \cf5 height: \cf8 90\cf2 ,\
+                              \cf5 width: \cf8 130\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Container\cf5 (\
+                            width: \cf8 180\cf2 ,\
+                            \cf5 child: \cf7 Column\cf5 (\
+                              crossAxisAlignment: CrossAxisAlignment.\cf9 start\cf2 ,\
+                              \cf5 mainAxisAlignment: MainAxisAlignment.\cf9 spaceAround\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Kaido Figure"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Kaido"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 14\cf2 ,\
+                                    \cf10 //fontWeight: FontWeight.bold,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "\uc0\u8369 3,200.00"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                                vertical: \cf8 10\cf2 , \cf5 horizontal: \cf8 14\cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Container\cf5 (\
+                              padding: \cf7 EdgeInsets\cf5 .\cf7 all\cf5 (\cf8 5\cf5 )\cf2 ,\
+                              \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                                color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                              \cf5 )\cf2 ,\
+                              \cf5 child: \cf7 Column\cf5 (\
+                                mainAxisAlignment:\
+                                    MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                                \cf5 children: [\
+                                  \cf7 Icon\cf5 (\
+                                    CupertinoIcons.
+\f1\i \cf9 add_circled
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                  \cf7 Text\cf5 (\
+                                    \cf4 "2"\cf2 ,\
+                                    \cf5 style: \cf7 TextStyle\cf5 (\
+                                      fontSize: \cf8 18\cf2 ,\
+                                      \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                      \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                    \cf5 )\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                  \cf7 Icon\cf5 (\
+                                    CupertinoIcons.
+\f1\i \cf9 minus_circle
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 ]\cf2 ,\
+                              \cf5 )\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                        \cf5 ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+                  \cf10 //Item\
+                  \cf7 Padding\cf5 (\
+                    padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (vertical: \cf8 9\cf5 )\cf2 ,\
+                    \cf5 child: \cf7 Container\cf5 (\
+                      width: \cf8 380\cf2 ,\
+                      \cf5 height: \cf8 100\cf2 ,\
+                      \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                        color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                        \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                        \cf5 boxShadow: [\
+                          \cf7 BoxShadow\cf5 (\
+                            color: Colors.
+\f1\i \cf9 grey
+\f0\i0 \cf5 .withOpacity(\cf8 0.5\cf5 )\cf2 ,\
+                            \cf5 spreadRadius: \cf8 3\cf2 ,\
+                            \cf5 blurRadius: \cf8 10\cf2 ,\
+                            \cf5 offset: \cf7 Offset\cf5 (\cf8 0\cf2 , \cf8 3\cf5 )\cf2 ,\
+                          \cf5 )\
+                        ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                      \cf5 child: \cf7 Row\cf5 (\
+                        children: [\
+                          \cf7 Container\cf5 (\
+                            alignment: Alignment.
+\f1\i \cf9 center
+\f0\i0 \cf2 ,\
+                            \cf5 child: \cf7 Image\cf5 .\cf7 asset\cf5 (\
+                              \cf4 'assets/images/Luffy.jpeg'\cf2 ,\
+                              \cf5 height: \cf8 90\cf2 ,\
+                              \cf5 width: \cf8 130\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Container\cf5 (\
+                            width: \cf8 180\cf2 ,\
+                            \cf5 child: \cf7 Column\cf5 (\
+                              crossAxisAlignment: CrossAxisAlignment.\cf9 start\cf2 ,\
+                              \cf5 mainAxisAlignment: MainAxisAlignment.\cf9 spaceAround\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Luffy Figure"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Monkey D. Luffy"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 14\cf2 ,\
+                                    \cf10 //fontWeight: FontWeight.bold,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "\uc0\u8369 2,500.00"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                                vertical: \cf8 10\cf2 , \cf5 horizontal: \cf8 14\cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Container\cf5 (\
+                              padding: \cf7 EdgeInsets\cf5 .\cf7 all\cf5 (\cf8 5\cf5 )\cf2 ,\
+                              \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                                color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                              \cf5 )\cf2 ,\
+                              \cf5 child: \cf7 Column\cf5 (\
+                                mainAxisAlignment:\
+                                    MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                                \cf5 children: [\
+                                  \cf7 Icon\cf5 (\
+                                    CupertinoIcons.
+\f1\i \cf9 add_circled
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                  \cf7 Text\cf5 (\
+                                    \cf4 "2"\cf2 ,\
+                                    \cf5 style: \cf7 TextStyle\cf5 (\
+                                      fontSize: \cf8 18\cf2 ,\
+                                      \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                      \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                    \cf5 )\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                  \cf7 Icon\cf5 (\
+                                    CupertinoIcons.
+\f1\i \cf9 minus_circle
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 ]\cf2 ,\
+                              \cf5 )\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                        \cf5 ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+\
+                  \cf7 Padding\cf5 (\
+                    padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (horizontal: \cf8 20\cf2 , \cf5 vertical: \cf8 30\cf5 )\cf2 ,\
+                    \cf5 child: \cf7 Container\cf5 (\
+                      padding: \cf7 EdgeInsets\cf5 .\cf7 all\cf5 (\cf8 20\cf5 )\cf2 ,\
+                      \cf5 decoration: \cf7 BoxDecoration\cf5 (\
+                        color: Colors.
+\f1\i \cf9 white
+\f0\i0 \cf2 ,\
+                        \cf5 borderRadius: \cf7 BorderRadius\cf5 .\cf7 circular\cf5 (\cf8 10\cf5 )\cf2 ,\
+                        \cf5 boxShadow: [\
+                          \cf7 BoxShadow\cf5 (\
+                              color: Colors.
+\f1\i \cf9 grey
+\f0\i0 \cf5 .withOpacity(\cf8 0.5\cf5 )\cf2 ,\
+                              \cf5 spreadRadius: \cf8 3\cf2 ,\
+                              \cf5 blurRadius: \cf8 10\cf2 ,\
+                              \cf5 offset: \cf7 Offset\cf5 (\cf8 0\cf2 , \cf8 3\cf5 ))\cf2 ,\
+                        \cf5 ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                      \cf5 child: \cf7 Column\cf5 (\
+                        children: [\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                              vertical: \cf8 10\cf2 ,\
+                            \cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Row\cf5 (\
+                              mainAxisAlignment: MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Items:"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "10"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Divider\cf5 (\
+                            color: Colors.
+\f1\i \cf9 black
+\f0\i0 \cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                              vertical: \cf8 10\cf2 ,\
+                            \cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Row\cf5 (\
+                              mainAxisAlignment: MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Sub-Total:"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "\uc0\u8369 3,200"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Divider\cf5 (\
+                            color: Colors.
+\f1\i \cf9 black
+\f0\i0 \cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                              vertical: \cf8 10\cf2 ,\
+                            \cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Row\cf5 (\
+                              mainAxisAlignment: MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Delivery:"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "100"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Divider\cf5 (\
+                            color: Colors.
+\f1\i \cf9 black
+\f0\i0 \cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf7 Padding\cf5 (\
+                            padding: \cf7 EdgeInsets\cf5 .\cf7 symmetric\cf5 (\
+                              vertical: \cf8 10\cf2 ,\
+                            \cf5 )\cf2 ,\
+                            \cf5 child: \cf7 Row\cf5 (\
+                              mainAxisAlignment: MainAxisAlignment.\cf9 spaceBetween\cf2 ,\
+                              \cf5 children: [\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "Total:"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                                \cf7 Text\cf5 (\
+                                  \cf4 "\uc0\u8369 3,300.00"\cf2 ,\
+                                  \cf5 style: \cf7 TextStyle\cf5 (\
+                                    fontSize: \cf8 20\cf2 ,\
+                                    \cf5 fontWeight: FontWeight.
+\f1\i \cf9 bold
+\f0\i0 \cf2 ,\
+                                    \cf5 color: Colors.
+\f1\i \cf9 red
+\f0\i0 \cf2 ,\
+                                  \cf5 )\cf2 ,\
+                                \cf5 )\cf2 ,\
+                              \cf5 ]\cf2 ,\
+                            \cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                        \cf5 ]\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+                \cf5 ]\cf2 ,\
+              \cf5 )\cf2 ,\
+            \cf5 )\cf2 ,\
+          \cf5 )\cf2 ,\
+        \cf5 ]\cf2 ,\
+      \cf5 )\cf2 ,\
+      \cf5 bottomNavigationBar: \cf7 CartBottomNavBar\cf5 ()\cf2 ,\
+    \cf5 )\cf2 ;\
+  \cf5 \}\
+\}\
+}
