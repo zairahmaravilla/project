@@ -1,0 +1,196 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Oblique;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red191\green100\blue38;\red32\green32\blue32;\red88\green118\blue71;
+\red153\green168\blue186;\red133\green96\blue154;\red173\green169\blue32;\red254\green187\blue91;\red86\green132\blue173;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c34510\c46275\c27843;
+\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c52157\c37647\c60392;\csgenericrgb\c67843\c66275\c12549;\csgenericrgb\c99608\c73333\c35686;\csgenericrgb\c33725\c51765\c67843;
+}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 import \cf4 'package:flutter/material.dart'\cf2 ;\
+\
+class \cf5 ProfileScreen \cf2 extends \cf5 StatelessWidget \{\
+  bool \cf6 isObscurePassword \cf5 = \cf2 true;\
+  \cf5 ProfileScreen(\{Key? key\}) : \cf2 super\cf5 (key: key)\cf2 ;\
+\
+  \cf7 @override\
+  \cf5 Widget \cf8 build\cf5 (BuildContext context) \{\
+    \cf2 return \cf8 Scaffold\cf5 (\
+      appBar: \cf8 AppBar\cf5 (\
+        title: \cf8 Text\cf5 (\cf4 'Profile'\cf5 )\cf2 ,\
+      \cf5 )\cf2 ,\
+      \cf5 body: \cf8 Container\cf5 (\
+        padding: \cf8 EdgeInsets\cf5 .\cf8 only\cf5 (left: \cf9 15\cf2 , \cf5 top: \cf9 20\cf2 , \cf5 right: \cf9 15\cf5 )\cf2 ,\
+        \cf5 child: \cf8 GestureDetector\cf5 (\
+          onTap: () \{\
+            FocusScope.
+\f1\i \cf8 of
+\f0\i0 \cf5 (context).unfocus()\cf2 ;\
+          \cf5 \}\cf2 ,\
+          \cf5 child: \cf8 ListView\cf5 (\
+            children: [\
+              \cf8 Center\cf5 (\
+                child: \cf8 Stack\cf5 (\
+                  children: [\
+                    \cf8 Container\cf5 (\
+                      width: \cf9 130\cf2 ,\
+                      \cf5 height: \cf9 130\cf2 ,\
+                      \cf5 decoration: \cf8 BoxDecoration\cf5 (\
+                        border: \cf8 Border\cf5 .\cf8 all\cf5 (width: \cf9 4\cf2 , \cf5 color: Colors.
+\f1\i \cf6 white
+\f0\i0 \cf5 )\cf2 ,\
+                        \cf5 boxShadow: [\
+                          \cf8 BoxShadow\cf5 (\
+                            spreadRadius: \cf9 2\cf2 ,\
+                            \cf5 blurRadius: \cf9 10\cf2 ,\
+                            \cf5 color: Colors.
+\f1\i \cf6 black
+\f0\i0 \cf5 .withOpacity(\cf9 0.1\cf5 )\cf2 ,\
+                          \cf5 )\cf2 ,\
+                        \cf5 ]\cf2 ,\
+                        \cf5 shape: BoxShape.\cf6 circle\cf2 ,\
+                        \cf5 image: \cf8 DecorationImage\cf5 (\
+                          fit: BoxFit.\cf6 cover\cf2 ,\
+                          \cf5 image: \cf8 AssetImage\cf5 (\cf4 "assets/Led Lamp/profile.jpeg"\cf5 )\cf2 ,\
+                        \cf5 )\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                    \cf8 Positioned\cf5 (\
+                      bottom: \cf9 0\cf2 ,\
+                      \cf5 right: \cf9 0\cf2 ,\
+                      \cf5 child: \cf8 Container\cf5 (\
+                        height: \cf9 40\cf2 ,\
+                        \cf5 width: \cf9 40\cf2 ,\
+                        \cf5 decoration: \cf8 BoxDecoration\cf5 (\
+                          shape: BoxShape.\cf6 circle\cf2 ,\
+                          \cf5 border: \cf8 Border\cf5 .\cf8 all\cf5 (\
+                            width: \cf9 4\cf2 ,\
+                            \cf5 color: Colors.
+\f1\i \cf6 white
+\f0\i0 \cf2 ,\
+                          \cf5 )\cf2 ,\
+                          \cf5 color: Colors.
+\f1\i \cf6 blue
+\f0\i0 \cf2 ,\
+                        \cf5 )\cf2 ,\
+                        \cf5 child: \cf8 Icon\cf5 (\
+                          Icons.
+\f1\i \cf6 edit
+\f0\i0 \cf2 ,\
+                        \cf5 )\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 ]\cf2 ,\
+                \cf5 )\cf2 ,\
+              \cf5 )\cf2 ,\
+              \cf8 SizedBox\cf5 (height: \cf9 30\cf5 )\cf2 ,\
+              \cf5 buildTextBuild(\cf4 "Full Name"\cf2 , \cf4 "Zairah"\cf2 , false\cf5 )\cf2 ,\
+              \cf5 buildTextBuild(\cf4 "Email"\cf2 , \cf4 "mzairah@gmail.com"\cf2 , false\cf5 )\cf2 ,\
+              \cf5 buildTextBuild(\cf4 "Password"\cf2 , \cf4 "*******"\cf2 , false\cf5 )\cf2 ,\
+              \cf5 buildTextBuild(\cf4 "Location"\cf2 , \cf4 "Philippines"\cf2 , false\cf5 )\cf2 ,\
+              \cf8 SizedBox\cf5 (height: \cf9 30\cf5 )\cf2 ,\
+              \cf8 Row\cf5 (\
+                mainAxisAlignment: MainAxisAlignment.\cf6 spaceBetween\cf2 ,\
+                \cf5 children: [\
+                  \cf8 OutlinedButton\cf5 (\
+                    onPressed: () \{\}\cf2 ,\
+                    \cf5 child: \cf8 Text\cf5 (\cf4 "CANCEL"\cf2 ,\
+                        \cf5 style: \cf8 TextStyle\cf5 (\
+                          fontSize: \cf9 15\cf2 ,\
+                          \cf5 letterSpacing: \cf9 2\cf2 ,\
+                          \cf5 color: Colors.
+\f1\i \cf6 black
+\f0\i0 \cf2 ,\
+                        \cf5 ))\cf2 ,\
+                    \cf5 style: OutlinedButton.
+\f1\i \cf8 styleFrom
+\f0\i0 \cf5 (\
+                      padding: \cf8 EdgeInsets\cf5 .\cf8 symmetric\cf5 (horizontal: \cf9 50\cf5 )\cf2 ,\
+                      \cf5 shape: \cf8 RoundedRectangleBorder\cf5 (\
+                        borderRadius: \cf8 BorderRadius\cf5 .\cf8 circular\cf5 (\cf9 20\cf5 )\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+                  \cf8 ElevatedButton\cf5 (\
+                    onPressed: () \{\}\cf2 ,\
+                    \cf5 child: \cf8 Text\cf5 (\cf4 "SAVE"\cf2 ,\
+                        \cf5 style: \cf8 TextStyle\cf5 (\
+                          fontSize: \cf9 15\cf2 ,\
+                          \cf5 color: Colors.
+\f1\i \cf6 white
+\f0\i0 \cf2 ,\
+                        \cf5 ))\cf2 ,\
+                    \cf5 style: ElevatedButton.
+\f1\i \cf8 styleFrom
+\f0\i0 \cf5 (\
+                      backgroundColor: Colors.
+\f1\i \cf6 blue
+\f0\i0 \cf2 ,\
+                      \cf5 padding: \cf8 EdgeInsets\cf5 .\cf8 symmetric\cf5 (horizontal: \cf9 50\cf5 )\cf2 ,\
+                      \cf5 shape: \cf8 RoundedRectangleBorder\cf5 (\
+                        borderRadius: \cf8 BorderRadius\cf5 .\cf8 circular\cf5 (\cf9 20\cf5 )\cf2 ,\
+                      \cf5 )\cf2 ,\
+                    \cf5 )\cf2 ,\
+                  \cf5 )\cf2 ,\
+                \cf5 ]\cf2 ,\
+              \cf5 )\cf2 ,\
+            \cf5 ]\cf2 ,\
+          \cf5 )\cf2 ,\
+        \cf5 )\cf2 ,\
+      \cf5 )\cf2 ,\
+    \cf5 )\cf2 ;\
+  \cf5 \}\
+\}\
+\
+Widget \cf8 buildTextBuild\cf5 (\
+    String LabelText\cf2 , \cf5 String placeholder\cf2 , \cf5 bool isPasswordTextField) \{\
+  \cf2 var \cf5 isObscurePassword\cf2 ;\
+  return \cf8 Padding\cf5 (\
+    padding: \cf8 EdgeInsets\cf5 .\cf8 only\cf5 (bottom: \cf9 30\cf5 )\cf2 ,\
+    \cf5 child: \cf8 TextField\cf5 (\
+      obscureText: isPasswordTextField ? isObscurePassword : \cf2 false,\
+      \cf5 decoration: \cf8 InputDecoration\cf5 (\
+        suffixIcon: isPasswordTextField\
+            ? \cf8 IconButton\cf5 (\
+                onPressed: () \{\
+                  setState(() \{\
+                    isObscurePassword = !isObscurePassword\cf2 ;\
+                  \cf5 \})\cf2 ;\
+                \cf5 \}\cf2 ,\
+                \cf5 icon: \cf8 Icon\cf5 (\
+                  Icons.
+\f1\i \cf6 remove_red_eye
+\f0\i0 \cf2 ,\
+                  \cf5 color: Colors.
+\f1\i \cf6 grey
+\f0\i0 \cf2 ,\
+                \cf5 )\cf2 ,\
+              \cf5 )\
+            : \cf2 null,\
+        \cf5 contentPadding: \cf8 EdgeInsets\cf5 .\cf8 only\cf5 (bottom: \cf9 5\cf5 )\cf2 ,\
+        \cf5 labelText: LabelText\cf2 ,\
+        \cf5 floatingLabelBehavior: FloatingLabelBehavior.\cf6 always\cf2 ,\
+        \cf5 hintText: placeholder\cf2 ,\
+        \cf5 hintStyle: \cf8 TextStyle\cf5 (\
+          fontSize: \cf9 16\cf2 ,\
+          \cf5 fontWeight: FontWeight.
+\f1\i \cf6 bold
+\f0\i0 \cf2 ,\
+          \cf5 color: Colors.
+\f1\i \cf6 grey
+\f0\i0 \cf2 ,\
+        \cf5 )\cf2 ,\
+      \cf5 )\cf2 ,\
+    \cf5 )\cf2 ,\
+  \cf5 )\cf2 ;\
+\cf5 \}\
+\
+\cf2 void \cf8 setState\cf5 (Null Function() param0) \{\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 \cb1 \
+}
