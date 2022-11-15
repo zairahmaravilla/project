@@ -1,0 +1,478 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red153\green168\blue186;\red32\green32\blue32;\red254\green187\blue91;
+\red191\green100\blue38;\red86\green132\blue173;\red133\green96\blue154;\red88\green118\blue71;\red109\green109\blue109;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c99608\c73333\c35686;
+\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c33725\c51765\c67843;\csgenericrgb\c52157\c37647\c60392;\csgenericrgb\c34510\c46275\c27843;\csgenericrgb\c42745\c42745\c42745;
+}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb3  
+\f1 \cf4 Padding\cf2 (\
+    padding: \cf5 const \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 7\cf2 )\cf5 ,\
+    \cf2 child: \cf4 Container\cf2 (\
+      width: \cf6 380\cf5 ,\
+      \cf2 height: \cf6 175\cf5 ,\
+      \cf2 decoration: \cf4 BoxDecoration\cf2 (\
+        color: Colors.
+\f2\i \cf7 white
+\f1\i0 \cf5 ,\
+        \cf2 borderRadius: \cf4 BorderRadius\cf2 .\cf4 circular\cf2 (\cf6 8\cf2 )\cf5 ,\
+        \cf2 boxShadow: [\
+          \cf4 BoxShadow\cf2 (\
+            color: Colors.
+\f2\i \cf7 grey
+\f1\i0 \cf2 .withOpacity(\cf6 0.5\cf2 )\cf5 ,\
+            \cf2 spreadRadius: \cf6 3\cf5 ,\
+            \cf2 blurRadius: \cf6 10\cf5 ,\
+            \cf2 offset: \cf4 Offset\cf2 (\cf6 0\cf5 , \cf6 3\cf2 )\cf5 ,\
+          \cf2 )\
+        ]\cf5 ,\
+      \cf2 )\cf5 ,\
+      \cf2 child: \cf4 Row\cf2 (\
+        children: [\
+          \cf4 GestureDetector\cf2 (\
+            onTap: () \{\
+              Navigator.
+\f2\i \cf4 of
+\f1\i0 \cf2 (context).push(\cf4 MaterialPageRoute\cf2 (\
+                  builder: (context) => \cf4 SingleItemPage\cf2 ()))\cf5 ;\
+            \cf2 \}\cf5 ,\
+            \cf2 child: \cf4 Container\cf2 (\
+              alignment: Alignment.
+\f2\i \cf7 center
+\f1\i0 \cf5 ,\
+              \cf2 child: \cf4 Image\cf2 .\cf4 asset\cf2 (\
+                \cf8 "assets/T-shirts/jacket.jpeg"\cf5 ,\
+                \cf2 height: \cf6 120\cf5 ,\
+                \cf2 width: \cf6 150\cf5 ,\
+              \cf2 )\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 SizedBox\cf2 (\
+            width: \cf6 160\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+                crossAxisAlignment: CrossAxisAlignment.\cf7 start\cf5 ,\
+                \cf2 mainAxisAlignment: MainAxisAlignment.\cf7 spaceAround\cf5 ,\
+                \cf2 children: [\
+                  \cf4 Text\cf2 (\
+                    \cf8 "One piece Hoodie"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 w600
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Popular Design Hoodie"\
+                    " Anime One piece Cosplay "\
+                    "Costume Luffy Zoro Robin Chopper Sanji 3D Printed Hoodie."\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 10\cf5 ,\
+                      \cf9 //fontWeight: FontWeight.w100,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 RatingBar\cf2 .\cf4 builder\cf2 (\
+                      initialRating: \cf6 4\cf5 ,\
+                      \cf2 minRating: \cf6 1\cf5 ,\
+                      \cf2 direction: Axis.\cf7 horizontal\cf5 ,\
+                      \cf2 itemCount: \cf6 5\cf5 ,\
+                      \cf2 itemSize: \cf6 18\cf5 ,\
+                      \cf2 itemPadding:\
+                          \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (horizontal: \cf6 4\cf2 )\cf5 ,\
+                      \cf2 itemBuilder: (context\cf5 , \cf2 _) =>\
+                          \cf4 Icon\cf2 (Icons.
+\f2\i \cf7 star
+\f1\i0 \cf5 , \cf2 color: Colors.
+\f2\i \cf7 yellow
+\f1\i0 \cf2 [\cf6 800\cf2 ])\cf5 ,\
+                      \cf2 onRatingUpdate: (index) \{\})\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "\uc0\u8369 1,800.00"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 color: Colors.
+\f2\i \cf7 black
+\f1\i0 \cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 bold
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                \cf2 ])\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 Padding\cf2 (\
+            padding:\
+                \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 10\cf5 , \cf2 horizontal: \cf6 35\cf2 )\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+              mainAxisAlignment: MainAxisAlignment.\cf7 spaceBetween\cf5 ,\
+              \cf2 children: [\
+                \cf4 Icon\cf2 (\
+                  Icons.
+\f2\i \cf7 favorite_outline
+\f1\i0 \cf5 ,\
+                  \cf2 color: Colors.
+\f2\i \cf7 red
+\f1\i0 \cf5 ,\
+                  \cf2 size: \cf6 26\cf5 ,\
+                \cf2 )\cf5 ,\
+              \cf2 ]\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+        \cf2 ]\cf5 ,\
+      \cf2 )\cf5 ,\
+    \cf2 )\cf5 ,\
+  \cf2 )\cf5 ,\
+for \cf2 (int i = \cf6 0\cf5 ; \cf2 i < \cf6 1\cf5 ; \cf2 i++)\
+  \cf9 //SingleItem\
+  \cf4 Padding\cf2 (\
+    padding: \cf5 const \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 7\cf2 )\cf5 ,\
+    \cf2 child: \cf4 Container\cf2 (\
+      width: \cf6 380\cf5 ,\
+      \cf2 height: \cf6 175\cf5 ,\
+      \cf2 decoration: \cf4 BoxDecoration\cf2 (\
+        color: Colors.
+\f2\i \cf7 white
+\f1\i0 \cf5 ,\
+        \cf2 borderRadius: \cf4 BorderRadius\cf2 .\cf4 circular\cf2 (\cf6 8\cf2 )\cf5 ,\
+        \cf2 boxShadow: [\
+          \cf4 BoxShadow\cf2 (\
+            color: Colors.
+\f2\i \cf7 grey
+\f1\i0 \cf2 .withOpacity(\cf6 0.5\cf2 )\cf5 ,\
+            \cf2 spreadRadius: \cf6 3\cf5 ,\
+            \cf2 blurRadius: \cf6 10\cf5 ,\
+            \cf2 offset: \cf4 Offset\cf2 (\cf6 0\cf5 , \cf6 3\cf2 )\cf5 ,\
+          \cf2 )\
+        ]\cf5 ,\
+      \cf2 )\cf5 ,\
+      \cf2 child: \cf4 Row\cf2 (\
+        children: [\
+          \cf4 GestureDetector\cf2 (\
+            onTap: () \{\
+              Navigator.
+\f2\i \cf4 of
+\f1\i0 \cf2 (context).push(\cf4 MaterialPageRoute\cf2 (\
+                  builder: (context) => \cf4 CartGgetoPage\cf2 ()))\cf5 ;\
+            \cf2 \}\cf5 ,\
+            \cf2 child: \cf4 Container\cf2 (\
+              alignment: Alignment.
+\f2\i \cf7 center
+\f1\i0 \cf5 ,\
+              \cf2 child: \cf4 Image\cf2 .\cf4 asset\cf2 (\
+                \cf8 "assets/images/geto.jpeg"\cf5 ,\
+                \cf2 height: \cf6 120\cf5 ,\
+                \cf2 width: \cf6 150\cf5 ,\
+              \cf2 )\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 SizedBox\cf2 (\
+            width: \cf6 150\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+                crossAxisAlignment: CrossAxisAlignment.\cf7 start\cf5 ,\
+                \cf2 mainAxisAlignment: MainAxisAlignment.\cf7 spaceAround\cf5 ,\
+                \cf2 children: [\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Suguru Geto Figure"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 w600
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Jujutsu Kaisen 0: The Movie - Suguru Geto ARTFX J Figure"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 15\cf5 ,\
+                      \cf9 //fontWeight: FontWeight.w100,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 RatingBar\cf2 .\cf4 builder\cf2 (\
+                      initialRating: \cf6 4\cf5 ,\
+                      \cf2 minRating: \cf6 1\cf5 ,\
+                      \cf2 direction: Axis.\cf7 horizontal\cf5 ,\
+                      \cf2 itemCount: \cf6 5\cf5 ,\
+                      \cf2 itemSize: \cf6 18\cf5 ,\
+                      \cf2 itemPadding:\
+                          \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (horizontal: \cf6 4\cf2 )\cf5 ,\
+                      \cf2 itemBuilder: (context\cf5 , \cf2 _) =>\
+                          \cf4 Icon\cf2 (Icons.
+\f2\i \cf7 star
+\f1\i0 \cf5 , \cf2 color: Colors.
+\f2\i \cf7 yellow
+\f1\i0 \cf2 [\cf6 800\cf2 ])\cf5 ,\
+                      \cf2 onRatingUpdate: (index) \{\})\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "\uc0\u8369 1,789.00"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 color: Colors.
+\f2\i \cf7 black
+\f1\i0 \cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 bold
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                \cf2 ])\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 Padding\cf2 (\
+            padding:\
+                \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 10\cf5 , \cf2 horizontal: \cf6 40\cf2 )\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+              mainAxisAlignment: MainAxisAlignment.\cf7 spaceBetween\cf5 ,\
+              \cf2 children: [\
+                \cf4 Icon\cf2 (\
+                  Icons.
+\f2\i \cf7 favorite_outline
+\f1\i0 \cf5 ,\
+                  \cf2 color: Colors.
+\f2\i \cf7 red
+\f1\i0 \cf5 ,\
+                  \cf2 size: \cf6 26\cf5 ,\
+                \cf2 )\cf5 ,\
+              \cf2 ]\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+        \cf2 ]\cf5 ,\
+      \cf2 )\cf5 ,\
+    \cf2 )\cf5 ,\
+  \cf2 )\cf5 ,\
+for \cf2 (int i = \cf6 0\cf5 ; \cf2 i < \cf6 1\cf5 ; \cf2 i++)\
+  \cf9 //SingleItem\
+  \cf4 Padding\cf2 (\
+    padding: \cf5 const \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 7\cf2 )\cf5 ,\
+    \cf2 child: \cf4 Container\cf2 (\
+      width: \cf6 380\cf5 ,\
+      \cf2 height: \cf6 175\cf5 ,\
+      \cf2 decoration: \cf4 BoxDecoration\cf2 (\
+        color: Colors.
+\f2\i \cf7 white
+\f1\i0 \cf5 ,\
+        \cf2 borderRadius: \cf4 BorderRadius\cf2 .\cf4 circular\cf2 (\cf6 8\cf2 )\cf5 ,\
+        \cf2 boxShadow: [\
+          \cf4 BoxShadow\cf2 (\
+            color: Colors.
+\f2\i \cf7 grey
+\f1\i0 \cf2 .withOpacity(\cf6 0.5\cf2 )\cf5 ,\
+            \cf2 spreadRadius: \cf6 3\cf5 ,\
+            \cf2 blurRadius: \cf6 10\cf5 ,\
+            \cf2 offset: \cf4 Offset\cf2 (\cf6 0\cf5 , \cf6 3\cf2 )\cf5 ,\
+          \cf2 )\
+        ]\cf5 ,\
+      \cf2 )\cf5 ,\
+      \cf2 child: \cf4 Row\cf2 (\
+        children: [\
+          \cf4 GestureDetector\cf2 (\
+            onTap: () \{\
+              Navigator.
+\f2\i \cf4 of
+\f1\i0 \cf2 (context).push(\cf4 MaterialPageRoute\cf2 (\
+                  builder: (context) => \cf4 SingleItemPage\cf2 ()))\cf5 ;\
+            \cf2 \}\cf5 ,\
+            \cf2 child: \cf4 Container\cf2 (\
+              alignment: Alignment.
+\f2\i \cf7 center
+\f1\i0 \cf5 ,\
+              \cf2 child: \cf4 Image\cf2 .\cf4 asset\cf2 (\
+                \cf8 "assets/merch/cross.png"\cf5 ,\
+                \cf2 height: \cf6 120\cf5 ,\
+                \cf2 width: \cf6 150\cf5 ,\
+              \cf2 )\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 SizedBox\cf2 (\
+            width: \cf6 150\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+                crossAxisAlignment: CrossAxisAlignment.\cf7 start\cf5 ,\
+                \cf2 mainAxisAlignment: MainAxisAlignment.\cf7 spaceAround\cf5 ,\
+                \cf2 children: [\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Naruto Uzumaki Figure"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 w600
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Naruto Shippuden | Naruto Uzumaki - Highly Detailed Figure "\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 15\cf5 ,\
+                      \cf9 //fontWeight: FontWeight.w100,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 RatingBar\cf2 .\cf4 builder\cf2 (\
+                      initialRating: \cf6 4\cf5 ,\
+                      \cf2 minRating: \cf6 1\cf5 ,\
+                      \cf2 direction: Axis.\cf7 horizontal\cf5 ,\
+                      \cf2 itemCount: \cf6 5\cf5 ,\
+                      \cf2 itemSize: \cf6 18\cf5 ,\
+                      \cf2 itemPadding:\
+                          \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (horizontal: \cf6 4\cf2 )\cf5 ,\
+                      \cf2 itemBuilder: (context\cf5 , \cf2 _) =>\
+                          \cf4 Icon\cf2 (Icons.
+\f2\i \cf7 star
+\f1\i0 \cf5 , \cf2 color: Colors.
+\f2\i \cf7 yellow
+\f1\i0 \cf2 [\cf6 800\cf2 ])\cf5 ,\
+                      \cf2 onRatingUpdate: (index) \{\})\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "\uc0\u8369 1,300.00"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 color: Colors.
+\f2\i \cf7 black
+\f1\i0 \cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 bold
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                \cf2 ])\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 Padding\cf2 (\
+            padding:\
+                \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 10\cf5 , \cf2 horizontal: \cf6 40\cf2 )\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+              mainAxisAlignment: MainAxisAlignment.\cf7 spaceBetween\cf5 ,\
+              \cf2 children: [\
+                \cf4 Icon\cf2 (\
+                  Icons.
+\f2\i \cf7 favorite_outline
+\f1\i0 \cf5 ,\
+                  \cf2 color: Colors.
+\f2\i \cf7 red
+\f1\i0 \cf5 ,\
+                  \cf2 size: \cf6 26\cf5 ,\
+                \cf2 )\cf5 ,\
+              \cf2 ]\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+        \cf2 ]\cf5 ,\
+      \cf2 )\cf5 ,\
+    \cf2 )\cf5 ,\
+  \cf2 )\cf5 ,\
+for \cf2 (int i = \cf6 0\cf5 ; \cf2 i < \cf6 1\cf5 ; \cf2 i++)\
+  \cf9 //SingleItem\
+  \cf4 Padding\cf2 (\
+    padding: \cf5 const \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 7\cf2 )\cf5 ,\
+    \cf2 child: \cf4 Container\cf2 (\
+      width: \cf6 380\cf5 ,\
+      \cf2 height: \cf6 175\cf5 ,\
+      \cf2 decoration: \cf4 BoxDecoration\cf2 (\
+        color: Colors.
+\f2\i \cf7 white
+\f1\i0 \cf5 ,\
+        \cf2 borderRadius: \cf4 BorderRadius\cf2 .\cf4 circular\cf2 (\cf6 8\cf2 )\cf5 ,\
+        \cf2 boxShadow: [\
+          \cf4 BoxShadow\cf2 (\
+            color: Colors.
+\f2\i \cf7 grey
+\f1\i0 \cf2 .withOpacity(\cf6 0.5\cf2 )\cf5 ,\
+            \cf2 spreadRadius: \cf6 3\cf5 ,\
+            \cf2 blurRadius: \cf6 10\cf5 ,\
+            \cf2 offset: \cf4 Offset\cf2 (\cf6 0\cf5 , \cf6 3\cf2 )\cf5 ,\
+          \cf2 )\
+        ]\cf5 ,\
+      \cf2 )\cf5 ,\
+      \cf2 child: \cf4 Row\cf2 (\
+        children: [\
+          \cf4 GestureDetector\cf2 (\
+            onTap: () \{\
+              Navigator.
+\f2\i \cf4 of
+\f1\i0 \cf2 (context).push(\cf4 MaterialPageRoute\cf2 (\
+                  builder: (context) => \cf4 SingleItemPage\cf2 ()))\cf5 ;\
+            \cf2 \}\cf5 ,\
+            \cf2 child: \cf4 Container\cf2 (\
+              alignment: Alignment.
+\f2\i \cf7 center
+\f1\i0 \cf5 ,\
+              \cf2 child: \cf4 Image\cf2 .\cf4 asset\cf2 (\
+                \cf8 "assets/merch/pattern.png"\cf5 ,\
+                \cf2 height: \cf6 110\cf5 ,\
+                \cf2 width: \cf6 130\cf5 ,\
+              \cf2 )\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 SizedBox\cf2 (\
+            width: \cf6 150\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+                crossAxisAlignment: CrossAxisAlignment.\cf7 start\cf5 ,\
+                \cf2 mainAxisAlignment: MainAxisAlignment.\cf7 spaceAround\cf5 ,\
+                \cf2 children: [\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Naruto Uzumaki Figure"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 w600
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "Naruto Shippuden | Naruto Uzumaki - Highly Detailed Figure "\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 15\cf5 ,\
+                      \cf9 //fontWeight: FontWeight.w100,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                  \cf4 RatingBar\cf2 .\cf4 builder\cf2 (\
+                      initialRating: \cf6 4\cf5 ,\
+                      \cf2 minRating: \cf6 1\cf5 ,\
+                      \cf2 direction: Axis.\cf7 horizontal\cf5 ,\
+                      \cf2 itemCount: \cf6 5\cf5 ,\
+                      \cf2 itemSize: \cf6 18\cf5 ,\
+                      \cf2 itemPadding:\
+                          \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (horizontal: \cf6 4\cf2 )\cf5 ,\
+                      \cf2 itemBuilder: (context\cf5 , \cf2 _) =>\
+                          \cf4 Icon\cf2 (Icons.
+\f2\i \cf7 star
+\f1\i0 \cf5 , \cf2 color: Colors.
+\f2\i \cf7 yellow
+\f1\i0 \cf2 [\cf6 800\cf2 ])\cf5 ,\
+                      \cf2 onRatingUpdate: (index) \{\})\cf5 ,\
+                  \cf4 Text\cf2 (\
+                    \cf8 "\uc0\u8369 1,300.00"\cf5 ,\
+                    \cf2 style: \cf4 TextStyle\cf2 (\
+                      fontSize: \cf6 18\cf5 ,\
+                      \cf2 color: Colors.
+\f2\i \cf7 black
+\f1\i0 \cf5 ,\
+                      \cf2 fontWeight: FontWeight.
+\f2\i \cf7 bold
+\f1\i0 \cf5 ,\
+                    \cf2 )\cf5 ,\
+                  \cf2 )\cf5 ,\
+                \cf2 ])\cf5 ,\
+          \cf2 )\cf5 ,\
+          \cf4 Padding\cf2 (\
+            padding:\
+                \cf4 EdgeInsets\cf2 .\cf4 symmetric\cf2 (vertical: \cf6 10\cf5 , \cf2 horizontal: \cf6 45\cf2 )\cf5 ,\
+            \cf2 child: \cf4 Column\cf2 (\
+              mainAxisAlignment: MainAxisAlignment.\cf7 spaceBetween\cf5 ,\
+              \cf2 children: [\
+                \cf4 Icon\cf2 (\
+                  Icons.
+\f2\i \cf7 favorite_outline
+\f1\i0 \cf5 ,\
+                  \cf2 color: Colors.
+\f2\i \cf7 red
+\f1\i0 \cf5 ,\
+                  \cf2 size: \cf6 26\cf5 ,\
+                \cf2 )\cf5 ,\
+              \cf2 ]\cf5 ,\
+            \cf2 )\cf5 ,\
+          \cf2 )\cf5 ,\
+        \cf2 ]\cf5 ,\
+      \cf2 )\cf5 ,\
+    \cf2 )\cf5 ,\
+  \cf2 )\cf5 ,\
+}
